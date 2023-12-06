@@ -12,7 +12,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(schema = "db", name = "user")
+@Table(schema = "db2022108013", name = "user")
 public class User implements Serializable {
 
     @Id

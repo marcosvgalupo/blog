@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(schema = "db", name = "post")
+@Table(schema = "db2022108013", name = "post")
 public class Post implements Serializable {
 
     @Id

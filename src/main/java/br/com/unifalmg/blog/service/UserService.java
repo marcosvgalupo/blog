@@ -39,4 +39,11 @@ public class UserService {
         return repository.save(user);
     }
 
+    public User edit(User user){
+        if(Objects.isNull(user) || Objects.isNull(user.getName()) || Objects.isNull(user.getUsername())){
+            throw new InvalidUserException("Tried to edit an user that doesnt exist");
+        }
+        return repository.save(user);
+    }
+
 }
