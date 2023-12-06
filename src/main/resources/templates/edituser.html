@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <h1>Edit User</h1>
+</header>
+    <form th:action="@{/user/{id}(id=${user.id})}" th:object="${user}" method="post">
+        <input type="hidden" th:field="${user.id}">
+        <label for="name">Name: </label>
+        <input name="name" th:field="*{name}">
+
+        <label for="username">Username: </label>
+        <input name="username" th:field="*{username}">
+
+        <label for="email">Email: </label>
+        <input name="email" th:field="*{email}">
+
+        <label for="phone">Phone: </label>
+        <input name="phone" th:field="*{phone}">
+
+        <label for="website">Website:</label>
+        <input name="website" th:field="*{website}">
+
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>
